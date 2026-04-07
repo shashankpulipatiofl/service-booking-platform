@@ -54,3 +54,72 @@ This project is designed to simplify home service booking and management through
 ---
 
 ## Project Structure
+service-booking-platform/
+│── app.py
+│── schema.sql
+│── README.md
+│── PROJECT_GUIDE.md
+│
+├── templates/
+├── static/
+
+
+---
+
+## Installation and Setup
+
+1. Clone the repository
+git clone https://github.com/shashankpulipatiofl/service-booking-platform.git
+cd service-booking-platform
+
+2. Install dependencies
+pip install flask flask-sqlalchemy pymysql werkzeug
+
+3. Configure database  
+- Create a MySQL database  
+- Import schema:
+mysql -u root -p < schema.sql
+
+4. Run the application
+python app.py
+
+5. Access the application
+http://127.0.0.1:5000/
+
+---
+
+## Core Logic
+
+- Automatic assignment of professionals based on availability and workload
+- Validation to ensure one service category per booking
+- Commission split: 20% admin, 80% provider
+- Role-based access control for secure operations
+
+---
+
+## Limitations
+
+- No payment gateway integration
+- Hardcoded configuration values
+- Monolithic backend structure
+
+---
+
+## Future Enhancements
+
+- Payment integration (Razorpay/Stripe)
+- Email/OTP verification system
+- Deployment on cloud platforms
+- Modular backend using Flask Blueprints
+
+---
+
+## Author
+
+Shashank Pulipati
+
+---
+
+## License
+
+This project is intended for educational purposes.
